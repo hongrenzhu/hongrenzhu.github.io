@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hongren Zhu - Home</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top, #f5f7ff 0, #e3ebff 40%, #f9fafb 100%);
+        color: #111827;
+      }
+      .card {
+        background: white;
+        padding: 32px 40px;
+        border-radius: 20px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+        max-width: 720px;
+        width: 100%;
+      }
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 12px;
+      }
+      .subtitle {
+        font-size: 16px;
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+      .section-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #4b5563;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 8px;
+      }
+      .text {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #374151;
+      }
+      .links {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .link {
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(37, 99, 235, 0.18);
+        color: #1d4ed8;
+        background: linear-gradient(135deg, rgba(219, 234, 254, 0.9), rgba(239, 246, 255, 0.9));
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.18s ease-out;
+      }
+      .link:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.22);
+        border-color: rgba(37, 99, 235, 0.6);
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #22c55e;
+      }
+      @media (max-width: 640px) {
+        body { padding: 20px; }
+        .card { padding: 24px 20px; }
+        .title { font-size: 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1 class="title">Hi，我是 Hongren Zhu</h1>
+      <p class="subtitle">欢迎来到我的 GitHub Pages 个人主页。</p>
+
+      <section>
+        <h2 class="section-title">About</h2>
+        <p class="text">
+          这里会慢慢整理我的项目、笔记和一些有意思的想法。<br />
+          当前版本只是一个简单的起始页，后面我会逐步丰富内容和样式。
+        </p>
+      </section>
+
+      <section class="links">
+        <a class="link" href="https://github.com/Hongrenn" target="_blank" rel="noreferrer">
+          <span class="dot"></span>
+          <span>GitHub</span>
+        </a>
+        <!-- 之后可以在这里继续加链接，比如博客 / 简历等 -->
+      </section>
+    </main>
+  </body>
+</html>
