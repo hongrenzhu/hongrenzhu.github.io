@@ -58,9 +58,9 @@
         font-size: 14px;
         padding: 8px 14px;
         border-radius: 999px;
-        border: 1px solid rgba(37, 99, 235, 0.18);
-        color: #1d4ed8;
-        background: linear-gradient(135deg, rgba(219, 234, 254, 0.9), rgba(239, 246, 255, 0.9));
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        color: inherit;
+        background: rgba(255, 255, 255, 0.9);
         display: inline-flex;
         align-items: center;
         gap: 6px;
@@ -68,14 +68,21 @@
       }
       .link:hover {
         transform: translateY(-1px);
-        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.22);
-        border-color: rgba(37, 99, 235, 0.6);
+        box-shadow: 0 10px 25px rgba(15, 118, 110, 0.18);
+        border-color: #34A853;
       }
       .dot {
         width: 6px;
         height: 6px;
         border-radius: 999px;
         background: #22c55e;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #34A853;
       }
       @media (max-width: 640px) {
         body { padding: 20px; }
@@ -98,6 +105,52 @@
         <p class="text" style="margin-top: 12px;">
           个人邮箱：<a href="mailto:i@zhuhong.ren">i@zhuhong.ren</a><br />
           学术邮箱：<a href="mailto:hongren.zhu@dal.ca">hongren.zhu@dal.ca</a>
+        </p>
+      </section>
+
+      <section style="margin-top: 20px;">
+        <h2 class="section-title">Education</h2>
+        <p class="text">
+          Dalhousie University, Halifax, NS, Canada<br />
+          Bachelor of Science in Statistics with First Class Honours (Supervisor: Dr. Lam Ho)
+        </p>
+      </section>
+
+      <section style="margin-top: 20px;">
+        <h2 class="section-title">Selected Research Experience</h2>
+        <p class="text">
+          <strong>(Selected Thesis)</strong> Research on Neural Network Loss Functions and Optimization Methods — A Case Study on the MNIST Dataset<br />
+          比较 3 种常见损失函数 × 3 种优化器组合对手写数字识别的影响，基于 PyTorch 搭建 CNN 并做控制实验，分析精度、F1-score、收敛速度和稳定性；结果表明 Focal Loss + SGD 组合效果最好（test accuracy ≈ 99.16%，F1-score ≈ 0.9916）。
+        </p>
+        <p class="text" style="margin-top: 10px;">
+          <strong>(Honours Thesis)</strong> A Comparative Study of Various Neural Network Architectures on CIFAR-10<br />
+          比较 SNN、FNN、DNN、CNN、ResNet 在 CIFAR-10 图像分类任务上的训练动态、性能与资源效率；CNN 在参数效率上表现最佳，而 ResNet 虽然准确率最高（约 93.68%），但资源效率最低。
+        </p>
+        <p class="text" style="margin-top: 10px;">
+          <strong>Data Analysis in Musquash Marine Protected Area</strong><br />
+          使用 2010–2023 年数据研究海洋保护区的生物多样性与沉积物特征，应用线性回归、GAM、回归树等模型；发现生物多样性在季节和空间上皆存在显著变化，沉积物纹理和有机质含量是关键解释变量。
+        </p>
+      </section>
+
+      <section style="margin-top: 20px;">
+        <h2 class="section-title">Selected Work Experience</h2>
+        <p class="text">
+          <strong>Data Analyst Assistant，Shandong Yimeng Traffic Development Investment Group Co., Ltd.</strong> （Jul. 2025 – Present）<br />
+          负责高速公路交通安全数据的收集与管理（事故、险情、安全违规等），使用 SQL 管理数据库；利用 ARIMA 和 Getis-Ord Gi* 统计量分析事故时空分布，识别高风险时段和路段；使用 Tableau 可视化事故热点并撰写分析报告，为交通标志与监控设施布局提供建议。
+        </p>
+        <p class="text" style="margin-top: 10px;">
+          <strong>Intern, Safety Supervision Department，Linyi Electric Power Industry Co., Ltd., State Grid Corporation of China</strong> （Jul. 2024 – Sep. 2024）<br />
+          参与电力工程施工现场的安全管理与督导，涵盖 220kV 及以下输电线路、变压器及配电工程；协助建立项目规划与控制流程，监督执行安全规范；通过检查与整改协作，使安全违规率在六个月内下降约 15%。
+        </p>
+      </section>
+
+      <section style="margin-top: 20px;">
+        <h2 class="section-title">Technical Skills & More</h2>
+        <p class="text">
+          <strong>Programming</strong>: Python, R, Java, Rust, JavaScript, SQL, Git, Cloud Services<br />
+          <strong>Tools</strong>: LaTeX, RStudio, VS Code, Cursor, PyCharm, IntelliJ IDEA, DataSpell, JupyterLab, MySQL, WordPress<br />
+          <strong>Languages</strong>: Mandarin (Native), English（满足学术需要）<br />
+          <strong>Hobbies</strong>: Piano, Guitar, Drum Set, Swimming, Soccer, Badminton
         </p>
       </section>
 
