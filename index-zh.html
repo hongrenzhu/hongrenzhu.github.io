@@ -1,250 +1,111 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>主洪任 - 主页</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, system-ui, -apple-system, system-ui, sans-serif;
-        background: #ffffff;
-        color: #111827;
-      }
-      .nav {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid #f3f4f6;
-      }
-      .nav-inner {
-        max-width: 920px;
-        margin: 0 auto;
-        padding: 12px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 14px;
-      }
-      .nav-brand {
-        font-weight: 600;
-        letter-spacing: 0.04em;
-      }
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        color: #6b7280;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: inherit;
-      }
-      .nav-links a:hover {
-        color: #34a853;
-      }
-      .nav-sep {
-        width: 1px;
-        height: 16px;
-        background: #e5e7eb;
-      }
-      .page {
-        max-width: 820px;
-        margin: 72px auto 64px;
-        padding: 0 24px;
-      }
-      .greeting {
-        font-size: 28px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 36px;
-      }
-      .intro {
-        display: flex;
-        align-items: flex-start;
-        gap: 32px;
-      }
-      .avatar {
-        flex-shrink: 0;
-        width: 112px;
-        height: 112px;
-        border-radius: 32px;
-        background: #f3f4f6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 40px;
-        font-weight: 700;
-        color: #6b7280;
-      }
-      .content {
-        font-size: 15px;
-        line-height: 1.7;
-        color: #374151;
-      }
-      .content p + p {
-        margin-top: 12px;
-      }
-      .section-heading {
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        margin-top: 28px;
-        margin-bottom: 8px;
-        color: #4b5563;
-      }
-      .links {
-        margin-top: 20px;
-      }
-      .link-pill {
-        display: inline-flex;
-        align-items: center;
-        font-size: 14px;
-        padding: 6px 12px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        background: #ffffff;
-        gap: 6px;
-      }
-      .link-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        background: #34a853;
-      }
-      .footer {
-        margin-top: 40px;
-        font-size: 11px;
-        color: #9ca3af;
-        text-align: center;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      a:hover {
-        color: #34a853;
-      }
-      @media (max-width: 640px) {
-        .page {
-          margin-top: 40px;
-          padding: 0 16px 40px;
-        }
-        .greeting {
-          font-size: 22px;
-        }
-        .intro {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="nav">
-      <div class="nav-inner">
-        <div class="nav-brand">Hongren Zhu</div>
-        <nav class="nav-links">
-          <a href="#top">首页</a>
-          <a href="#education">教育</a>
-          <a href="#research">研究</a>
-          <a href="#work">工作</a>
-          <a href="#skills">技能</a>
-          <a href="#contact">联系</a>
-          <div class="nav-sep"></div>
-          <a href="index.html">EN</a>
-          <a href="index-zh.html">中文</a>
-        </nav>
-      </div>
-    </header>
-    <main class="page" id="top">
-      <h1 class="greeting">嗨！</h1>
-      <section class="intro">
-        <div class="avatar">HZ</div>
-        <div class="content">
-          <p>
-            我是 <strong>主洪任</strong>（He/Him），目前在
-            <strong>达尔豪斯大学（Dalhousie University）</strong>攻读
-            <strong>统计学一等荣誉理学学士</strong>。
-          </p>
-          <p>
-            我的兴趣主要在统计学、数据分析和机器学习的交叉地带。近期的研究集中在图像识别任务中
-            神经网络损失函数与优化算法的对比，以及在 MNIST 和 CIFAR-10 等数据集上，不同神经网络结构在性能和效率上的差异。
-          </p>
-
-          <h2 id="education" class="section-heading">教育经历</h2>
-          <p>
-            <strong>Dalhousie University</strong>，Halifax, NS, Canada<br />
-            Bachelor of Science in Statistics with First Class Honours（Supervisor: Dr. Lam Ho）
-          </p>
-
-          <h2 id="research" class="section-heading">SELECTED RESEARCH EXPERIENCE</h2>
-          <p>
-            <strong>(Selected Thesis)</strong> Research on Neural Network Loss Functions and
-            Optimization Methods — A Case Study on the MNIST Dataset。基于 PyTorch 搭建 CNN，
-            比较三种常见损失函数与三种主流优化器在手写数字识别中的表现，从准确率、F1-score、收敛速度和训练稳定性等多维度进行评估；
-            结果表明 Focal Loss 与 SGD 的组合表现最佳（test accuracy ≈ 99.16%，F1-score ≈ 0.9916）。
-          </p>
-          <p>
-            <strong>(Honours Thesis)</strong> A Comparative Study of Various Neural Network Architectures on
-            CIFAR-10。系统比较 SNN、FNN、DNN、CNN 和 ResNet 在 CIFAR-10 图像分类任务中的训练动态、
-            最终性能与参数效率；结论是 CNN 在参数利用上最为高效，而 ResNet 虽然准确率最高（约 93.68%），
-            但在资源效率上代价更高。
-          </p>
-          <p>
-            <strong>Data Analysis in Musquash Marine Protected Area</strong>。利用 2010–2023 年监测数据，
-            研究海洋保护区的生物多样性与沉积物特征，采用线性回归、GAM 与回归树等模型，发现生物多样性在季节和空间上均存在显著变化，
-            而沉积物纹理与有机质含量是关键解释变量。
-          </p>
-
-          <h2 id="work" class="section-heading">SELECTED WORK EXPERIENCE</h2>
-          <p>
-            <strong>Data Analyst Assistant，Shandong Yimeng Traffic Development Investment Group Co., Ltd.</strong>
-            （Jul. 2025 – Present）。负责高速公路交通安全数据（事故、险情、安全违规等）的采集与管理，使用 SQL 维护数据库；
-            通过 ARIMA 与 Getis-Ord Gi* 统计量分析事故时空分布，识别高风险路段与时段，并利用 Tableau 可视化事故热点，
-            以支持基于数据的安全设施布局建议。
-          </p>
-          <p>
-            <strong>Intern, Safety Supervision Department，Linyi Electric Power Industry Co., Ltd., State Grid Corporation of China</strong>
-            （Jul. 2024 – Sep. 2024）。参与 220kV 及以下输电线路、变压器及配电工程等项目的现场安全管理与监督，
-            协助建立项目规划与控制流程并监督安全规范执行；通过检查与整改协作，使安全违规率在六个月内约下降 15%。
-          </p>
-
-          <h2 id="skills" class="section-heading">TECHNICAL SKILLS & MORE</h2>
-          <p>
-            <strong>Programming</strong>：Python, R, Java, Rust, JavaScript, SQL, Git, Cloud Services<br />
-            <strong>Tools</strong>：LaTeX, RStudio, VS Code, Cursor, PyCharm, IntelliJ IDEA, DataSpell,
-            JupyterLab, MySQL, WordPress<br />
-            <strong>Languages</strong>：普通话（母语）、英语（满足学术交流和写作需要）<br />
-            <strong>Hobbies</strong>：钢琴、吉他、架子鼓、游泳、足球、羽毛球
-          </p>
-
-          <h2 id="contact" class="section-heading" style="margin-top: 24px; margin-bottom: 8px;">CONTACT</h2>
-          <p>
-            个人邮箱：<a href="mailto:i@zhuhong.ren">i@zhuhong.ren</a><br />
-            学术邮箱：<a href="mailto:hongren.zhu@dal.ca">hongren.zhu@dal.ca</a>
-          </p>
-
-          <div class="links">
-            <a class="link-pill" href="https://github.com/hongrenzhu" target="_blank" rel="noreferrer">
-              <span class="link-dot"></span>
-              <span>GitHub</span>
-            </a>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>主洪任 Hongren Zhu | 统计与数据分析</title>
+  <meta name="description" content="主洪任，香港大学统计学硕士在读。关注数据分析、机器学习与环境统计，拥有交通安全数据分析和神经网络研究经历。">
+  <meta name="theme-color" content="#173e35">
+  <link rel="canonical" href="https://hongrenzhu.github.io/index-zh.html">
+  <link rel="alternate" hreflang="en" href="https://hongrenzhu.github.io/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hongrenzhu.github.io/index-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://hongrenzhu.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="主洪任 Hongren Zhu | 统计与数据分析">
+  <meta property="og:description" content="主洪任，香港大学统计学硕士在读。关注数据分析、机器学习与环境统计，拥有交通安全数据分析和神经网络研究经历。">
+  <meta property="og:url" content="https://hongrenzhu.github.io/index-zh.html">
+  <meta property="og:locale" content="zh_CN">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Hongren Zhu", "url": "https://hongrenzhu.github.io/", "email": "mailto:hongren.zhu@connect.hku.hk", "sameAs": ["https://github.com/hongrenzhu"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Dalhousie University"}, "affiliation": {"@type": "CollegeOrUniversity", "name": "The University of Hong Kong"}, "knowsAbout": ["Statistics", "Data Analysis", "Machine Learning"]}</script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-language="zh">
+  <a class="skip-link" href="#main-content">跳至主要内容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Hongren Zhu"><span class="brand-mark" aria-hidden="true">hz.</span><span class="brand-name">Hongren Zhu</span></a>
+      <nav class="primary-nav" aria-label="主导航"><a href="#work">工作经历</a><a href="#research">研究项目</a><a href="#education">教育经历</a><a href="#skills">技能</a><a href="#contact">联系</a></nav>
+      <nav class="language-switch" aria-label="Language / 语言"><a href="index.html" lang="en" hreflang="en"  aria-label="Switch to English">EN</a><span aria-hidden="true">/</span><a href="index-zh.html" lang="zh-CN" hreflang="zh-Hans" aria-current="page" aria-label="中文（当前语言）">中文</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <div id="main-content" tabindex="-1">
+      <section class="hero container" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">统计学 · 数据分析 · 机器学习</p>
+          <h1 class="hero-title" id="intro-title">Hongren Zhu<span aria-hidden="true">.</span></h1>
+          <p class="hero-role">从数据中发现规律，<br>让分析回应实际问题。</p>
+          <p class="hero-description">我是主洪任，目前在香港大学攻读统计学硕士。我的经历涵盖交通安全数据分析、神经网络研究和环境统计，使用 Python、R 与 SQL 探索数据、评估模型并呈现分析结果。</p>
+          <div class="hero-actions"><a class="button button-primary" href="#work">查看我的经历 <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="assets/Hongren_Zhu_CV.pdf" download aria-label="下载主洪任的英文简历（PDF）">下载英文简历 <span aria-hidden="true">↓</span></a></div>
+          <p class="hero-location"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>现居香港</p>
         </div>
+        <aside class="profile-card" aria-label="目前在读">
+          <p class="profile-label">目前在读</p>
+          <div class="profile-monogram" aria-hidden="true"><span>H<span class="monogram-z">Z</span></span></div>
+          <p class="profile-degree">统计学硕士</p><p class="profile-school">香港大学</p><p class="profile-year">预计毕业 · 2027</p>
+          <div class="profile-divider"></div>
+          <dl class="profile-facts"><div><dt>学术基础</dt><dd>统计学理学学士 · 一等荣誉</dd></div><div><dt>工作方式</dt><dd>分析数据，建立模型，传达发现。</dd></div></dl>
+        </aside>
       </section>
-
-      <footer class="footer">
-        © <span>Hongren Zhu</span>
-      </footer>
-    </main>
-  </body>
+      <section class="section container" id="work" aria-labelledby="work-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / 工作经历</p><h2 id="work-title">让数据走进实践。</h2></div><p class="section-note">从真实记录出发，为实际工作中的判断与规划提供依据。</p></div>
+        <div class="experience-list"><article class="experience-item">
+            <div class="experience-meta"><p class="period">2025.07 – 2026.08</p><span class="experience-index" aria-hidden="true">01</span></div>
+            <div class="experience-content"><h3>数据分析助理</h3><p class="organization">山东沂蒙交通发展投资集团有限公司</p>
+            <ul class="bullet-list"><li>采集 <strong>114.3 公里高速公路路段</strong>的事故、险情及安全违规记录，使用 SQL 数据库管理事件数据。</li><li>运用 ARIMA 与 Getis–Ord 统计量分析事故频率，使用 Tableau 绘制热点分布，识别高风险位置与时段。</li><li>撰写分析报告，就交通标志与监控摄像头的布设提出建议，支持道路安全规划。</li></ul><div class="tags"><span>SQL</span><span>ARIMA</span><span>空间分析</span><span>Tableau</span></div></div>
+        </article><article class="experience-item">
+            <div class="experience-meta"><p class="period">2024.07 – 2024.09</p><span class="experience-index" aria-hidden="true">02</span></div>
+            <div class="experience-content"><h3>安全监察部门实习生</h3><p class="organization">国家电网 · 临沂电力实业有限公司</p>
+            <ul class="bullet-list"><li>参与 <strong>220 kV 及以下</strong>电力线路、变压器与配电建设项目的安全监督。</li><li>检查施工现场，识别违反安全规程的情况，并与现场管理人员协作落实整改。</li><li>建立系统化的项目规划与控制方法，支持安全规范及运营标准的执行。</li></ul><div class="tags"><span>现场检查</span><span>安全合规</span><span>项目规划</span></div></div>
+        </article></div>
+      </section>
+      <section class="section container" id="research" aria-labelledby="research-title">
+        <div class="section-heading"><div><p class="eyebrow">02 / 研究与项目</p><h2 id="research-title">从问题出发，探索数据。</h2></div><p class="section-note">从图像识别到海洋生物多样性，关注建模方法与评估结果。</p></div>
+        <div class="project-grid"><article class="project project-featured">
+            <div class="project-topline"><span class="project-number" aria-hidden="true">01</span><span class="project-type">研究论文 · MNIST</span></div>
+            <h3>神经网络损失函数与优化方法</h3><p class="project-date">2025.01 – 2025.06</p>
+            <p class="project-description">训练方法如何影响图像识别表现？基于 PyTorch 搭建卷积神经网络，在控制超参数的条件下，评估九种损失函数与优化器组合。</p>
+            <div class="project-result"><div class="metric"><span class="metric-value">99.16<span>%</span></span><span class="metric-label">MNIST 测试集准确率</span></div><p class="result-note">在本次实验中，Focal Loss 与 SGD 的组合表现最佳，F1-score 为 <strong>0.9916</strong>。</p></div>
+            <div class="tags"><span>Python</span><span>PyTorch</span><span>CNN</span><span>模型评估</span></div>
+            <details class="project-details"><summary>了解研究细节</summary><p>从准确率、F1-score、收敛速度与训练稳定性等维度进行比较，并通过学习曲线与混淆矩阵呈现不同组合的表现。</p></details>
+        </article><article class="project project-secondary">
+            <div class="project-topline"><span class="project-number" aria-hidden="true">02</span><span class="project-type">荣誉学位论文 · DALHOUSIE</span></div>
+            <h3>神经网络架构比较</h3><p class="project-date">2024.11 – 2025.05</p>
+            <p class="project-description">使用 PyTorch 在 CIFAR-10 上实现五种神经网络架构，比较准确率、收敛过程与资源效率。</p>
+            <div class="project-result"><div class="metric"><span class="metric-value">93.68<span>%</span></span><span class="metric-label">ResNet 在 CIFAR-10 上的准确率</span></div><p class="result-note">卷积神经网络（CNN）的参数效率最佳。</p></div>
+            <div class="tags"><span>PyTorch</span><span>计算机视觉</span><span>GPU 训练</span></div>
+            <details class="project-details"><summary>方法与训练过程</summary><p>对图像数据进行预处理与增强，调整参数，并使用 GPU 训练模型，评估预测表现与资源消耗之间的权衡。</p></details>
+        </article><article class="project project-environment">
+            <div class="project-topline"><span class="project-number" aria-hidden="true">03</span><span class="project-type">研究项目 · DALHOUSIE</span></div>
+            <h3>海洋生物多样性分析</h3><p class="project-date">2024.09 – 2025.01</p>
+            <p class="project-description">利用加拿大渔业及海洋部 2010–2023 年的数据，分析 Musquash 海洋保护区的生物多样性。</p>
+            <div class="project-result"><p class="result-note">沉积物纹理与有机质含量是关键解释变量。</p></div>
+            <div class="tags"><span>环境统计</span><span>GAM</span><span>回归树</span></div>
+            <details class="project-details"><summary>方法与研究发现</summary><p>计算生物多样性指数，运用线性回归、广义加性模型（GAM）及回归树分析季节与空间变化，考察生物多样性与沉积物组成及环境因素的关系。</p></details>
+        </article></div>
+      </section>
+      <section class="section container" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><div><p class="eyebrow">03 / 教育经历</p><h2 id="education-title">以统计学为基础。</h2></div><p class="section-note">在加拿大建立统计学基础，在香港继续深入学习。</p></div>
+        <div class="education-grid"><article class="education-item">
+            <div class="education-topline"><span class="school-abbr">HKU</span><span class="period">预计 2027 年毕业</span></div>
+            <h3>香港大学</h3><p class="degree">统计学硕士</p><p class="education-detail">中国香港</p>
+            <div class="coursework"><h4>目前修读课程</h4><p>金融数据分析 · 空间数据分析 · 统计推断基础 · 时间序列预测 · 营销分析</p></div>
+        </article><article class="education-item">
+            <div class="education-topline"><span class="school-abbr">DAL</span><span class="period">2025 年 6 月毕业</span></div>
+            <h3>达尔豪斯大学</h3><p class="degree">统计学理学学士 · 一等荣誉</p><p class="education-detail">加拿大新斯科舍省哈利法克斯 · GPA 3.98/4.3</p>
+            <div class="coursework"><h4>部分课程</h4><p>R 统计学习（A+）· 最优化（A+）· 试验设计（A+）</p></div>
+        </article></div>
+      </section>
+      <section class="section container" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading"><div><p class="eyebrow">04 / 技能</p><h2 id="skills-title">分析背后的工具。</h2></div></div>
+        <div class="skills-grid"><div class="skill-group"><h3>编程语言</h3><p>Python · R · SQL (MySQL)</p></div><div class="skill-group"><h3>机器学习</h3><p>PyTorch</p></div><div class="skill-group"><h3>工具</h3><p>Excel · Tableau · Git · JupyterLab · RStudio · LaTeX</p></div><div class="skill-group"><h3>语言能力</h3><p>普通话 — 母语<br>英语 — 专业工作能力</p></div></div>
+      </section>
+      <section class="section container" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel"><div><p class="eyebrow">05 / 联系</p><h2 id="contact-title">保持联系。</h2><p>欢迎联系我，交流数据分析与统计相关的工作机会，或进一步了解我的经历与项目。</p></div><div class="contact-actions"><a class="contact-email" href="mailto:hongren.zhu@connect.hku.hk">hongren.zhu@connect.hku.hk <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="tel:+85267721695">+852 6772-1695</a><a href="https://github.com/hongrenzhu" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="assets/Hongren_Zhu_CV.pdf" download>英文简历 / PDF <span aria-hidden="true">↓</span></a></div></div></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer container"><p>© <span data-year>2026</span> Hongren Zhu <span class="footer-description">· 统计学、数据分析与机器学习。</span></p><div class="footer-links"><a href="#top">返回顶部 <span aria-hidden="true">↑</span></a></div></footer>
+</body>
 </html>
-

@@ -1,259 +1,111 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hongren Zhu - Home</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, system-ui, -apple-system, system-ui, sans-serif;
-        background: #ffffff;
-        color: #111827;
-      }
-      .nav {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid #f3f4f6;
-      }
-      .nav-inner {
-        max-width: 920px;
-        margin: 0 auto;
-        padding: 12px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 14px;
-      }
-      .nav-brand {
-        font-weight: 600;
-        letter-spacing: 0.04em;
-      }
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        color: #6b7280;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: inherit;
-      }
-      .nav-links a:hover {
-        color: #34a853;
-      }
-      .nav-sep {
-        width: 1px;
-        height: 16px;
-        background: #e5e7eb;
-      }
-      .page {
-        max-width: 820px;
-        margin: 72px auto 64px;
-        padding: 0 24px;
-      }
-      .greeting {
-        font-size: 28px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 36px;
-      }
-      .intro {
-        display: flex;
-        align-items: flex-start;
-        gap: 32px;
-      }
-      .avatar {
-        flex-shrink: 0;
-        width: 112px;
-        height: 112px;
-        border-radius: 32px;
-        background: #f3f4f6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 40px;
-        font-weight: 700;
-        color: #6b7280;
-      }
-      .content {
-        font-size: 15px;
-        line-height: 1.7;
-        color: #374151;
-      }
-      .content p + p {
-        margin-top: 12px;
-      }
-      .section-heading {
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        margin-top: 28px;
-        margin-bottom: 8px;
-        color: #4b5563;
-      }
-      .links {
-        margin-top: 20px;
-      }
-      .link-pill {
-        display: inline-flex;
-        align-items: center;
-        font-size: 14px;
-        padding: 6px 12px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        background: #ffffff;
-        gap: 6px;
-      }
-      .link-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        background: #34a853;
-      }
-      .footer {
-        margin-top: 40px;
-        font-size: 11px;
-        color: #9ca3af;
-        text-align: center;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      a:hover {
-        color: #34a853;
-      }
-      @media (max-width: 640px) {
-        .page {
-          margin-top: 40px;
-          padding: 0 16px 40px;
-        }
-        .greeting {
-          font-size: 22px;
-        }
-        .intro {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="nav">
-      <div class="nav-inner">
-        <div class="nav-brand">Hongren Zhu</div>
-        <nav class="nav-links">
-          <a href="#top">Home</a>
-          <a href="#education">Education</a>
-          <a href="#research">Research</a>
-          <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-          <div class="nav-sep"></div>
-          <a href="index.html">EN</a>
-          <a href="index-zh.html">中文</a>
-        </nav>
-      </div>
-    </header>
-    <main class="page" id="top">
-      <h1 class="greeting">Hi there!</h1>
-      <section class="intro">
-        <div class="avatar">HZ</div>
-        <div class="content">
-          <p>
-            I am <strong>Hongren Zhu (He/Him)</strong>, currently a BSc student in
-            <strong>Statistics</strong> with First Class Honours at
-            <strong>Dalhousie University</strong>.
-          </p>
-          <p>
-            My academic interests sit at the intersection of statistics, data analysis, and machine
-            learning. Recently, I have been working on neural network loss functions and
-            optimization methods for image recognition, as well as comparative studies of different
-            neural network architectures on benchmark datasets such as MNIST and CIFAR-10.
-          </p>
-
-          <h2 id="education" class="section-heading">Education</h2>
-          <p>
-            <strong>Dalhousie University</strong>, Halifax, NS, Canada<br />
-            Bachelor of Science in Statistics with First Class Honours (Supervisor: Dr. Lam Ho)
-          </p>
-
-          <h2 id="research" class="section-heading">Selected Research Experience</h2>
-          <p>
-            <strong>(Selected Thesis)</strong> Research on Neural Network Loss Functions and
-            Optimization Methods — A Case Study on the MNIST Dataset. Compared three common loss
-            functions and three mainstream optimizers for handwritten digit recognition using
-            PyTorch-built CNNs, analysing accuracy, F1-score, convergence speed, and training
-            stability; the combination of Focal Loss and SGD achieved the best performance (test
-            accuracy ≈ 99.16%, F1-score ≈ 0.9916).
-          </p>
-          <p>
-            <strong>(Honours Thesis)</strong> A Comparative Study of Various Neural Network
-            Architectures on CIFAR-10. Evaluated SNN, FNN, DNN, CNN, and ResNet in terms of training
-            dynamics, final performance, and parameter efficiency; CNN was the most efficient in
-            terms of parameters, while ResNet achieved the highest accuracy (~93.68%) at the cost of
-            efficiency.
-          </p>
-          <p>
-            <strong>Data Analysis in Musquash Marine Protected Area</strong>. Analysed biodiversity
-            and sediment characteristics using 2010–2023 monitoring data, applying linear regression,
-            GAMs, and regression trees; identified significant seasonal and spatial variations in
-            biodiversity with sediment texture and organic content as key explanatory variables.
-          </p>
-
-          <h2 id="work" class="section-heading">Selected Work Experience</h2>
-          <p>
-            <strong>Data Analyst Assistant, Shandong Yimeng Traffic Development Investment Group Co., Ltd.</strong>
-            (Jul. 2025 – Present). Collected and managed highway safety data (accidents, near
-            misses, and safety violations) using SQL databases; applied ARIMA and Getis-Ord Gi*
-            statistics to analyse accident patterns and identify high-risk periods and locations;
-            visualised accident hotspots with Tableau to support data-driven safety recommendations.
-          </p>
-          <p>
-            <strong>Intern, Safety Supervision Department, Linyi Electric Power Industry Co., Ltd., State Grid Corporation of China</strong>
-            (Jul. 2024 – Sep. 2024). Assisted with safety supervision of power engineering projects
-            (220 kV and below), contributed to planning and control procedures, and helped enforce
-            safety standards, leading to an approximate 15% reduction in safety violations over six
-            months.
-          </p>
-
-          <h2 id="skills" class="section-heading">Technical Skills & More</h2>
-          <p>
-            <strong>Programming</strong>: Python, R, Java, Rust, JavaScript, SQL, Git, Cloud
-            Services<br />
-            <strong>Tools</strong>: LaTeX, RStudio, VS Code, Cursor, PyCharm, IntelliJ IDEA,
-            DataSpell, JupyterLab, MySQL, WordPress<br />
-            <strong>Languages</strong>: Mandarin (Native), English (Fluent)<br />
-            <strong>Hobbies</strong>: Piano, Guitar, Drum Set, Swimming, Soccer, Badminton
-          </p>
-
-          <h2 id="contact" class="section-heading" style="margin-top: 24px; margin-bottom: 8px;">Contact</h2>
-          <p>
-            Personal Email: <a href="mailto:i@zhuhong.ren">i@zhuhong.ren</a><br />
-            Academic Email: <a href="mailto:hongren.zhu@dal.ca">hongren.zhu@dal.ca</a>
-          </p>
-
-          <div class="links">
-            <a class="link-pill" href="https://github.com/hongrenzhu" target="_blank" rel="noreferrer">
-              <span class="link-dot"></span>
-              <span>GitHub</span>
-            </a>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hongren Zhu | Statistics & Data Analysis</title>
+  <meta name="description" content="Hongren Zhu, Master of Statistics student at the University of Hong Kong. Experience in road-safety analytics, machine learning and environmental statistics.">
+  <meta name="theme-color" content="#173e35">
+  <link rel="canonical" href="https://hongrenzhu.github.io/">
+  <link rel="alternate" hreflang="en" href="https://hongrenzhu.github.io/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hongrenzhu.github.io/index-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://hongrenzhu.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hongren Zhu | Statistics & Data Analysis">
+  <meta property="og:description" content="Hongren Zhu, Master of Statistics student at the University of Hong Kong. Experience in road-safety analytics, machine learning and environmental statistics.">
+  <meta property="og:url" content="https://hongrenzhu.github.io/">
+  <meta property="og:locale" content="en_GB">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Hongren Zhu", "url": "https://hongrenzhu.github.io/", "email": "mailto:hongren.zhu@connect.hku.hk", "sameAs": ["https://github.com/hongrenzhu"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Dalhousie University"}, "affiliation": {"@type": "CollegeOrUniversity", "name": "The University of Hong Kong"}, "knowsAbout": ["Statistics", "Data Analysis", "Machine Learning"]}</script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-language="en">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Hongren Zhu"><span class="brand-mark" aria-hidden="true">hz.</span><span class="brand-name">Hongren Zhu</span></a>
+      <nav class="primary-nav" aria-label="Main navigation"><a href="#work">Experience</a><a href="#research">Projects</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+      <nav class="language-switch" aria-label="Language / 语言"><a href="index.html" lang="en" hreflang="en" aria-current="page" aria-label="English (current language)">EN</a><span aria-hidden="true">/</span><a href="index-zh.html" lang="zh-CN" hreflang="zh-Hans"  aria-label="切换到中文">中文</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <div id="main-content" tabindex="-1">
+      <section class="hero container" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">STATISTICS · DATA ANALYSIS · MACHINE LEARNING</p>
+          <h1 class="hero-title" id="intro-title">Hongren Zhu<span aria-hidden="true">.</span></h1>
+          <p class="hero-role">Finding patterns.<br>Making sense of data.</p>
+          <p class="hero-description">I’m a Master of Statistics student at the University of Hong Kong. My work spans road-safety analytics, neural networks and environmental statistics, using Python, R and SQL to turn data into useful findings.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="assets/Hongren_Zhu_CV.pdf" download aria-label="Download Hongren Zhu’s CV (PDF, English)">Download CV <span aria-hidden="true">↓</span></a></div>
+          <p class="hero-location"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Based in Hong Kong</p>
         </div>
+        <aside class="profile-card" aria-label="CURRENTLY">
+          <p class="profile-label">CURRENTLY</p>
+          <div class="profile-monogram" aria-hidden="true"><span>H<span class="monogram-z">Z</span></span></div>
+          <p class="profile-degree">Master of Statistics</p><p class="profile-school">The University of Hong Kong</p><p class="profile-year">Expected graduation · 2027</p>
+          <div class="profile-divider"></div>
+          <dl class="profile-facts"><div><dt>Foundation</dt><dd>BSc Statistics · First-Class Honours</dd></div><div><dt>Approach</dt><dd>Analyse. Model. Communicate.</dd></div></dl>
+        </aside>
       </section>
-
-      <footer class="footer">
-        © <span>Hongren Zhu</span>
-      </footer>
-    </main>
-  </body>
+      <section class="section container" id="work" aria-labelledby="work-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / EXPERIENCE</p><h2 id="work-title">Data in practice.</h2></div><p class="section-note">Working with real records, operational constraints and decisions that matter.</p></div>
+        <div class="experience-list"><article class="experience-item">
+            <div class="experience-meta"><p class="period">Jul. 2025 – Aug. 2026</p><span class="experience-index" aria-hidden="true">01</span></div>
+            <div class="experience-content"><h3>Data Analyst Assistant</h3><p class="organization">Shandong Yimeng Traffic Development Investment Group Co., Ltd.</p>
+            <ul class="bullet-list"><li>Collected accident, near-miss and safety-violation records for a <strong>114.3 km expressway section</strong> and managed incident data in SQL.</li><li>Analysed accident frequency using ARIMA and Getis–Ord statistics; mapped hotspots in Tableau to identify high-risk locations and periods.</li><li>Produced reports recommending traffic-sign and surveillance-camera placement to support road-safety planning.</li></ul><div class="tags"><span>SQL</span><span>ARIMA</span><span>Spatial analysis</span><span>Tableau</span></div></div>
+        </article><article class="experience-item">
+            <div class="experience-meta"><p class="period">Jul. 2024 – Sep. 2024</p><span class="experience-index" aria-hidden="true">02</span></div>
+            <div class="experience-content"><h3>Intern, Safety Supervision Department</h3><p class="organization">Linyi Electric Power Industry Co., Ltd., State Grid Corporation of China</p>
+            <ul class="bullet-list"><li>Supported safety supervision for power-line, transformer and distribution construction projects at <strong>220 kV and below</strong>.</li><li>Inspected construction sites, identified safety-protocol violations and worked with site managers on corrective action.</li><li>Developed a systematic approach to project planning and control to support safety compliance and operational standards.</li></ul><div class="tags"><span>Site inspection</span><span>Safety compliance</span><span>Project planning</span></div></div>
+        </article></div>
+      </section>
+      <section class="section container" id="research" aria-labelledby="research-title">
+        <div class="section-heading"><div><p class="eyebrow">02 / RESEARCH & PROJECTS</p><h2 id="research-title">Questions worth exploring.</h2></div><p class="section-note">From image recognition to biodiversity: selected work in modelling and evaluation.</p></div>
+        <div class="project-grid"><article class="project project-featured">
+            <div class="project-topline"><span class="project-number" aria-hidden="true">01</span><span class="project-type">RESEARCH PAPER · MNIST</span></div>
+            <h3>Loss functions & optimization</h3><p class="project-date">Jan. 2025 – Jun. 2025</p>
+            <p class="project-description">How do training choices affect image recognition? I built PyTorch CNNs and evaluated nine loss-function and optimizer combinations under controlled hyperparameters.</p>
+            <div class="project-result"><div class="metric"><span class="metric-value">99.16<span>%</span></span><span class="metric-label">Test accuracy on MNIST</span></div><p class="result-note">Focal loss + SGD performed best in these experiments, with an F1-score of <strong>0.9916</strong>.</p></div>
+            <div class="tags"><span>Python</span><span>PyTorch</span><span>CNN</span><span>Model evaluation</span></div>
+            <details class="project-details"><summary>A closer look</summary><p>Compared accuracy, F1-score, convergence and training stability. Visualised learning curves and confusion matrices to examine how the combinations behaved.</p></details>
+        </article><article class="project project-secondary">
+            <div class="project-topline"><span class="project-number" aria-hidden="true">02</span><span class="project-type">HONOURS THESIS · DALHOUSIE</span></div>
+            <h3>Comparing neural architectures</h3><p class="project-date">Nov. 2024 – May 2025</p>
+            <p class="project-description">Implemented five neural network architectures in PyTorch for CIFAR-10, comparing accuracy, convergence and resource efficiency.</p>
+            <div class="project-result"><div class="metric"><span class="metric-value">93.68<span>%</span></span><span class="metric-label">ResNet accuracy on CIFAR-10</span></div><p class="result-note">CNN offered the best parameter efficiency.</p></div>
+            <div class="tags"><span>PyTorch</span><span>Computer vision</span><span>GPU training</span></div>
+            <details class="project-details"><summary>Methods & training</summary><p>Preprocessed and augmented image data, tuned parameters and trained models on GPUs. Assessed the trade-offs between predictive performance and resource use.</p></details>
+        </article><article class="project project-environment">
+            <div class="project-topline"><span class="project-number" aria-hidden="true">03</span><span class="project-type">RESEARCH PROJECT · DALHOUSIE</span></div>
+            <h3>Understanding marine biodiversity</h3><p class="project-date">Sep. 2024 – Jan. 2025</p>
+            <p class="project-description">Analysed biodiversity in Musquash Marine Protected Area using 2010–2023 Department of Fisheries and Oceans data.</p>
+            <div class="project-result"><p class="result-note">Sediment texture and organic content were key explanatory variables.</p></div>
+            <div class="tags"><span>Environmental statistics</span><span>GAM</span><span>Regression trees</span></div>
+            <details class="project-details"><summary>Methods & findings</summary><p>Derived biodiversity indices and modelled seasonal and spatial variation using linear regression, generalised additive models and regression trees. Examined relationships with sediment composition and environmental factors.</p></details>
+        </article></div>
+      </section>
+      <section class="section container" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><div><p class="eyebrow">03 / EDUCATION</p><h2 id="education-title">A foundation in statistics.</h2></div><p class="section-note">Studying in Hong Kong. A statistical foundation built in Canada.</p></div>
+        <div class="education-grid"><article class="education-item">
+            <div class="education-topline"><span class="school-abbr">HKU</span><span class="period">Expected 2027</span></div>
+            <h3>The University of Hong Kong</h3><p class="degree">Master of Statistics</p><p class="education-detail">Hong Kong</p>
+            <div class="coursework"><h4>CURRENT COURSEWORK</h4><p>Financial Data Analysis · Spatial Data Analysis · Fundamentals of Statistical Inference · Time Series Forecasting · Marketing Analytics</p></div>
+        </article><article class="education-item">
+            <div class="education-topline"><span class="school-abbr">DAL</span><span class="period">Jun. 2025</span></div>
+            <h3>Dalhousie University</h3><p class="degree">BSc in Statistics, First-Class Honours</p><p class="education-detail">Halifax, NS, Canada · GPA 3.98/4.3</p>
+            <div class="coursework"><h4>SELECTED COURSEWORK</h4><p>Statistical Learning with R (A+) · Optimization (A+) · Design of Experiments (A+)</p></div>
+        </article></div>
+      </section>
+      <section class="section container" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading"><div><p class="eyebrow">04 / SKILLS</p><h2 id="skills-title">The tools behind the work.</h2></div></div>
+        <div class="skills-grid"><div class="skill-group"><h3>Programming</h3><p>Python · R · SQL (MySQL)</p></div><div class="skill-group"><h3>Machine learning</h3><p>PyTorch</p></div><div class="skill-group"><h3>Tools</h3><p>Excel · Tableau · Git · JupyterLab · RStudio · LaTeX</p></div><div class="skill-group"><h3>Languages</h3><p>Mandarin — native<br>English — professional proficiency</p></div></div>
+      </section>
+      <section class="section container" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel"><div><p class="eyebrow">05 / CONTACT</p><h2 id="contact-title">Let’s connect.</h2><p>For opportunities in data analysis and statistics, or a conversation about my work, get in touch.</p></div><div class="contact-actions"><a class="contact-email" href="mailto:hongren.zhu@connect.hku.hk">hongren.zhu@connect.hku.hk <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="tel:+85267721695">+852 6772-1695</a><a href="https://github.com/hongrenzhu" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="assets/Hongren_Zhu_CV.pdf" download>CV / PDF <span aria-hidden="true">↓</span></a></div></div></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer container"><p>© <span data-year>2026</span> Hongren Zhu <span class="footer-description">· Statistics, data analysis & machine learning.</span></p><div class="footer-links"><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+</body>
 </html>
