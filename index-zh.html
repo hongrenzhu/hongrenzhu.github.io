@@ -11,15 +11,12 @@
       color-scheme: light;
       color: #000080;
       background: #fff;
-      font-family: "Times New Roman", Times, "Songti SC", "Songti TC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
     }
-    body, button, input, select, textarea { font-family: "Times New Roman", Times, "Songti SC", "Songti TC", "STSong", "SimSun", "Noto Serif CJK SC", serif; }
     body { margin: 8px; line-height: 1.35; }
     .site { max-width: 1024px; margin: 0 auto; }
     a { color: #800080; text-underline-offset: .12em; }
     a:visited { color: #702323; }
     a:hover { color: #000080; }
-    :focus-visible { outline: 2px solid #000080; outline-offset: 3px; }
     [hidden] { display: none !important; }
     .masthead { text-align: center; padding: 19px 12px 15px; }
     .masthead h1 {
@@ -173,7 +170,7 @@
   <script>
     const pages = [...document.querySelectorAll("main > section[id]")];
 
-    function showPage(focusPage = false) {
+    function showPage() {
       const fragment = location.hash.slice(1);
       const current = pages.find(page => page.id === fragment) || pages[0];
       pages.forEach(page => { page.hidden = page !== current; });
@@ -181,14 +178,9 @@
       document.title = current.id === "home"
         ? "主洪任 · 个人主页"
         : heading.textContent + " · 主洪任";
-      if (focusPage) {
-        window.scrollTo(0, 0);
-        heading.tabIndex = -1;
-        heading.focus({ preventScroll: true });
-      }
     }
 
-    window.addEventListener("hashchange", () => showPage(true));
+    window.addEventListener("hashchange", showPage);
     showPage();
   </script>
 </body>
